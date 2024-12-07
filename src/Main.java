@@ -25,8 +25,12 @@ public class Main {
         System.out.println(booksList);
         booksList.sort(Book.byTitle);
         System.out.println(booksList);
-        booksList.sort(Book.byYear);;
+        //booksList.sort(Book.byYear);;
+        //System.out.println(booksList);
+
+        booksList.sort(new BookYearComparator());
         System.out.println(booksList);
+
 
     }
 }
