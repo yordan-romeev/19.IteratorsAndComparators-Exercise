@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 
 public class Book implements Comparable<Book>{
@@ -59,4 +60,18 @@ public class Book implements Comparable<Book>{
             return this.title.compareTo(o.title);
         }
     }
+
+    public static Comparator<Book> byTitle = new Comparator<>() {
+        @Override
+        public int compare(Book o1, Book o2) {
+            return o1.title.compareTo(o2.title);
+        }
+    };
+
+    public static Comparator<Book> byYear = new Comparator<>() {
+        @Override
+        public int compare(Book o1, Book o2) {
+            return Integer.compare(o1.year, o2.year);
+        }
+    };
 }

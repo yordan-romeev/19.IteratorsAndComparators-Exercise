@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Main {
     public static void main(String[] args) {
         Book book1 = new Book("Title1", 1990, "Author1", "Author 2");
@@ -15,6 +17,16 @@ public class Main {
         System.out.println(book1.compareTo(book1));
         System.out.println(book1.compareTo(book3));
 
+        ArrayList<Book> booksList = new ArrayList<>();
+        booksList.add(book1);
+        booksList.add(book2);
+        booksList.add(book3);
+
+        System.out.println(booksList);
+        booksList.sort(Book.byTitle);
+        System.out.println(booksList);
+        booksList.sort(Book.byYear);;
+        System.out.println(booksList);
 
     }
 }
