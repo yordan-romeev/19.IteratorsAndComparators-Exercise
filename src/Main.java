@@ -8,6 +8,11 @@ public class Main {
         System.out.println(book2);
         System.out.println(book3);
 
+        Library<Book> library = new Library<>(book1, book2, book3);
+        System.out.println(library);
+
+
+
 
     }
 }
